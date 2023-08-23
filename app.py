@@ -27,7 +27,7 @@ documento_seleccionado = st.selectbox('Documento:', vectorstore)
 # define el valor de 'k', que es el número de resultados que genera la búsqueda sobre los chunks y
 # define el link a utilizar para mostrar el documento en la app.
 if documento_seleccionado == 'Reportaje IA':
-    doc = 'https:/github.com/HaroldConley/doc_chat_faiss/blob/main/reportaje_faiss/'
+    doc = 'https://github.com/HaroldConley/doc_chat_faiss/tree/db6fe89faf045baed7803fc715e9591fb43c3a2f/reportaje_faiss'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
