@@ -31,11 +31,11 @@ if documento_seleccionado == 'Reportaje IA':
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
-    doc = 'https://github.com/HaroldConley/doc_chat_faiss/tree/main/OGUC_2016_faiss/'
+    doc = './OGUC_2016_faiss/'
     k = 2
     link = "[Enlace al documento](https://drive.google.com/file/d/1IORJZnoKxdF44FAGY5UE8Na4iVZxX0YK/view?usp=share_link)"
 elif documento_seleccionado == 'NCh 433 Of.96 Mod.2009':
-    doc = 'https://github.com/HaroldConley/doc_chat_faiss/tree/main/nch_433_faiss/'
+    doc = './nch_433_faiss/'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/1_htone_jV9mk-RYddheTis1a2_4KiKbS/view?usp=share_link)"
 
