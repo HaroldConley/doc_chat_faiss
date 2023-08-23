@@ -27,7 +27,7 @@ documento_seleccionado = st.selectbox('Documento:', vectorstore)
 # define el valor de 'k', que es el número de resultados que genera la búsqueda sobre los chunks y
 # define el link a utilizar para mostrar el documento en la app.
 if documento_seleccionado == 'Reportaje IA':
-    doc = 'https://github.com/HaroldConley/doc_chat_faiss/blob/db6fe89faf045baed7803fc715e9591fb43c3a2f/reportaje_faiss/'
+    doc = 'https://github.com/HaroldConley/doc_chat_faiss/blob/main/reportaje_faiss/index.faiss'
     k = 4
     link = "[Enlace al documento](https://drive.google.com/file/d/146f91rndeXFOpfY2IT9ybF5tHw6YFWyP/view?usp=share_link)"
 elif documento_seleccionado == 'Cap. 5 Ordenanza General de Urbanismo y Construcciones':
@@ -40,7 +40,8 @@ elif documento_seleccionado == 'NCh 433 Of.96 Mod.2009':
     link = "[Enlace al documento](https://drive.google.com/file/d/1_htone_jV9mk-RYddheTis1a2_4KiKbS/view?usp=share_link)"
 
 # Cargando el vectorstore. Puede ser 'reportaje', 'OGUC_2016_removed' o 'nch_433_mod_test_2'
-db = FAISS.load_local(doc, embeddings)
+#db = FAISS.load_local(doc, embeddings)
+db = FAISS.from_documents(doc, embeddings)
 
 # expose this index in a retriever interface
 retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": k})
